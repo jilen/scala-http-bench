@@ -1,0 +1,52 @@
+#Http4s ember
+Running 1m test @ http://127.0.0.1:8080/hello
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   144.66us  185.61us   7.18ms   93.63%
+    Req/Sec    36.93k     0.87k   38.53k    94.08%
+  8818881 requests in 1.00m, 1.20GB read
+Requests/sec: 146975.26
+Transfer/sec:     20.46MB
+
+
+
+#http4s-netty
+Running 1m test @ http://127.0.0.1:8080/hello
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   348.13us    5.67ms 185.86ms   99.68%
+    Req/Sec    63.75k    11.49k   70.78k    91.96%
+  15222862 requests in 1.00m, 1.73GB read
+Requests/sec: 253294.47
+Transfer/sec:     29.47MB
+
+#http4s-ameria
+Running 1m test @ http://127.0.0.1:8080/hello
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    74.28us   89.35us  14.21ms   98.50%
+    Req/Sec    54.27k     2.50k   57.16k    91.39%
+  12981821 requests in 1.00m, 1.77GB read
+Requests/sec: 216005.78
+Transfer/sec:     30.08MB
+
+#Akka HTTP
+Running 1m test @ http://127.0.0.1:8080/hello
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   133.22us    1.69ms  81.12ms   99.45%
+    Req/Sec    88.01k    11.13k  106.50k    89.75%
+  21020332 requests in 1.00m, 2.92GB read
+Requests/sec: 350300.80
+Transfer/sec:     49.78MB
+
+
+#zhttp
+unning 1m test @ http://127.0.0.1:8080/hello
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    33.93us   95.50us   7.97ms   98.05%
+    Req/Sec   148.71k     7.19k  168.74k    83.44%
+  35570992 requests in 1.00m, 2.32GB read
+Requests/sec: 591868.84
+Transfer/sec:     39.51MB
