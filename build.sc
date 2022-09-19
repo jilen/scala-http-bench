@@ -1,11 +1,13 @@
 import mill._
 import mill.scalalib._
+import mill.scalanativelib._
+import mill.scalanativelib.api._
 
 trait ModuleBase extends ScalaModule {
   def scalaVersion = "2.13.8"
 }
 
-object http4s extends ModuleBase {
+object http4s extends Module {
 
   object ember extends ModuleBase {
     def ivyDeps = Agg(
@@ -27,6 +29,26 @@ object http4s extends ModuleBase {
       ivy"org.http4s::http4s-netty-server:0.6.0-M2",
       ivy"io.netty:netty-transport-native-epoll:4.1.81.Final;classifier=linux-x86_64"
     )
+  }
+
+  object native extends ScalaNativeModule {
+    def scalaVersion = "2.13.8"
+    def scalaNativeVersion = "0.4.7"
+
+    override def ivyDeps = super.nativeIvyDeps() ++ Agg(
+      ivy"org.http4s::http4s-dsl::0.23.16",
+      ivy"org.http4s::http4s-ember-server::0.23.16",
+      ivy"com.armanbilge::epollcat::0.1.1"
+    )
+
+    override def releaseMode = {
+      ReleaseMode.ReleaseFull
+    }
+
+    override def nativeLTO = {
+      LTO.Thin
+    }
+
   }
 
 }
