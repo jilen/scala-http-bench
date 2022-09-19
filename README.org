@@ -1,0 +1,12 @@
+* Run server
+
+First with [[https://github.com/com-lihaoyi/mill][mill]] installed
+
+For http4s ~scala-native~
++ First install ~clang~ and ~llvm~.
++ Then build binry with ~mill http4s.native.nativeLink~.
++ Then run ~out/http4s/native/nativeLink.des/out~
+
+For other modules
++ First assebly module with ~mill <module>.assembly~
++ Then run ~java -jar -Xmx1024m out/<module>/assembly.dest/out.jar~

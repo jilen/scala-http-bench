@@ -30,6 +30,17 @@ Running 1m test @ http://127.0.0.1:8080/hello
 Requests/sec: 216005.78
 Transfer/sec:     30.08MB
 
+#http4s-scala-native
+Running 1m test @ http://127.0.0.1:8080/hello
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.73ms   65.35ms   1.73s    99.28%
+    Req/Sec     3.32k   438.45     6.65k    91.77%
+  783199 requests in 1.00m, 109.05MB read
+  Socket errors: connect 0, read 0, write 0, timeout 2
+Requests/sec:  13049.87
+Transfer/sec:      1.82MB
+
 #Akka HTTP
 Running 1m test @ http://127.0.0.1:8080/hello
   4 threads and 16 connections
