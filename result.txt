@@ -50,3 +50,14 @@ unning 1m test @ http://127.0.0.1:8080/hello
   35570992 requests in 1.00m, 2.32GB read
 Requests/sec: 591868.84
 Transfer/sec:     39.51MB
+
+
+#finagle-http
+Running 1m test @ http://127.0.0.1:8080/hello
+  4 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   119.53us    2.14ms  93.65ms   99.65%
+    Req/Sec   126.05k    13.92k  168.89k    97.42%
+  30142605 requests in 1.00m, 2.36GB read
+Requests/sec: 501544.69
+Transfer/sec:     40.18MB

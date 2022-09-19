@@ -29,7 +29,12 @@ object http4s extends ModuleBase {
     )
   }
 
+}
 
+object finagle extends ModuleBase {
+  def ivyDeps = Agg(
+    ivy"com.twitter::finagle-http:22.4.0"
+  )
 }
 
 object akka extends ModuleBase {
