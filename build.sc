@@ -11,8 +11,8 @@ object http4s extends Module {
 
   object ember extends ModuleBase {
     def ivyDeps = Agg(
-      ivy"org.http4s::http4s-dsl:0.23.16",
-      ivy"org.http4s::http4s-ember-server:0.23.16"
+      ivy"org.http4s::http4s-dsl:1.0.0-M36",
+      ivy"org.http4s::http4s-ember-server:1.0.0-M36"
     )
   }
 
